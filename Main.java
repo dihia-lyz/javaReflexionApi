@@ -16,14 +16,15 @@ public class Main {
             //create new objet
             Object obj = constr.newInstance("John", "Doe", "Londres");
 
-            //call methods
+            //call method getFirstName
             Method getFirstName = classe.getMethod("getFirstName");
             String firstname = (String) getFirstName.invoke(obj);
             System.out.println("user firstname is " + firstname);
 
             //call methode toString
-            String str = obj.toString();
-            System.out.println(str);
+            Method toStringMethod = classe.getMethod("toString");
+            String userString = (String) toStringMethod.invoke(obj);
+            System.out.println("user data are \n" + userString);
 
         } catch (Exception e) {
             System.out.println(e);

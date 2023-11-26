@@ -19,8 +19,7 @@ public class User {
     }
 
     public String toString() {
-        return "User : \n" +
-                this.firstName + "     " +  this.firstName + "      " + this.address;
+        return this.firstName + "     " +  this.lastName + "      " + this.address;
     }
 
 }
